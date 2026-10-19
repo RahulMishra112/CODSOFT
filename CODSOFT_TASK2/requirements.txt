@@ -1,0 +1,3 @@
+# Standard library components used (tkinter, unittest, math)
+# pytest added for automated test execution
+pytest>=7.0.0
