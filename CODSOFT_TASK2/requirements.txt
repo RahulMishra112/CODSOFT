@@ -1,3 +1,4 @@
 # Standard library components used (tkinter, unittest, math)
 # pytest added for automated test execution
+flask>=2.3.0
 pytest>=7.0.0

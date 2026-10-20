@@ -1,0 +1,16 @@
+# Python Virtual Environments
+venv/
+ENV/
+env/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE configurations
+.vscode/
+.idea/
+
+# Testing output
+.pytest_cache/

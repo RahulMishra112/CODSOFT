@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatch AI — Indian & Global Movie Recommendation Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <div class="app-wrapper">
+        <header class="hero-header">
+            <div class="badge">TASK 4 • CODSOFT AI INTERNSHIP</div>
+            <h1>CINEMATCH <span class="highlight">AI</span></h1>
+            <p class="subtitle">Next-Gen Content Recommendation Engine for Indian & Global Cinema</p>
+        </header>
+
+        <main class="glass-card">
+            <div class="input-group">
+                <label for="movie-input">Search Movie Title (Hindi, Telugu, Tamil, English):</label>
+                <div class="autocomplete-wrapper">
+                    <input type="text" id="movie-input" placeholder="e.g. RRR, Baahubali, 3 Idiots, KGF, Pathaan..." autocomplete="off">
+                    <div id="autocomplete-list" class="autocomplete-items hidden"></div>
+                </div>
+            </div>
+
+            <div class="control-grid">
+                <div class="control-item">
+                    <label for="top-n">Recommendations Count:</label>
+                    <select id="top-n">
+                        <option value="3">Top 3 Matches</option>
+                        <option value="5" selected>Top 5 Matches</option>
+                        <option value="8">Top 8 Matches</option>
+                        <option value="10">Top 10 Matches</option>
+                    </select>
+                </div>
+                <div class="control-item btn-container">
+                    <button id="recommend-btn" class="glow-btn">
+                        <span>Generate AI Matches</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="loader" class="loader-container hidden">
+                <div class="spinner"></div>
+                <p>Analyzing TF-IDF Feature Matrices & Cosine Vector Distances...</p>
+            </div>
+
+            <div id="error-message" class="error-banner hidden"></div>
+        </main>
+
+        <section id="results-section" class="results-wrapper hidden">
+            <h2 class="section-title">Recommended Masterpieces</h2>
+            <div id="results-grid" class="cards-grid"></div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

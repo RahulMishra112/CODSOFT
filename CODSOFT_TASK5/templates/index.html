@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFace AI — Real-Time Face Detection & Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="badge">TASK 5 • CODSOFT AI INTERNSHIP</div>
+            <h1>REAL-TIME FACE VISION <span class="highlight">AI</span></h1>
+            <p class="subtitle">Live Video Stream Detection (Haar Cascade) & Face Recognition (LBPH)</p>
+        </header>
+
+        <main class="main-grid">
+            <!-- Left Panel: Live Stream Controls -->
+            <section class="glass-card">
+                <h2>1. Live Stream Controls</h2>
+                
+                <div class="webcam-box">
+                    <video id="webcam-video" autoplay playsinline muted class="hidden"></video>
+                    <button id="start-stream-btn" class="btn-primary">Start Live Real-Time Stream</button>
+                    <button id="stop-stream-btn" class="btn-secondary hidden">Stop Live Stream</button>
+                </div>
+
+                <div class="divider">OR UPLOAD IMAGE</div>
+
+                <div class="drop-zone" id="drop-zone">
+                    <p>Click or Drag Image Here for Single Analysis</p>
+                    <input type="file" id="file-input" accept="image/*" class="hidden">
+                </div>
+            </section>
+
+            <!-- Right Panel: Live Feed Output & Enrollment -->
+            <section class="glass-card">
+                <h2>2. Real-Time Analytics & Identity Portal</h2>
+
+                <div id="status-card" class="status-card">
+                    <div id="face-count" class="count-badge">0 Faces Detected</div>
+                    <div id="stream-status" class="status-badge">Stream Idle</div>
+                </div>
+
+                <div class="preview-box">
+                    <img id="output-image" class="hidden" alt="Real-Time Rendered Feed">
+                </div>
+
+                <div class="enroll-form">
+                    <h3>Enroll Participant</h3>
+                    <input type="text" id="enroll-name" placeholder="Enter Person Name (e.g., Amar)">
+                    <button id="enroll-btn" class="btn-accent">Enroll Current Face</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
