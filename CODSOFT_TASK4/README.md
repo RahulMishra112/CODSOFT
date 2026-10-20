@@ -1,4 +1,3 @@
-```markdown
 # Task 4: Content-Based AI Movie Recommendation Engine
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
@@ -45,8 +44,6 @@ CODSOFT_TASK4/
     └── test_recommender.py # Automated Test Suite
 
 
-
-
     🛠️ Technology Stack
 Language: Python 3.10+
 
@@ -60,9 +57,11 @@ Testing: Pytest
 
 🚀 Installation & Setup
 
+et Up Virtual Environment:
 
-
-
+PowerShell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 Install Dependencies:
 
 Bash

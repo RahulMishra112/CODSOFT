@@ -46,3 +46,46 @@ CODSOFT_TASK5/
 │       └── app.js          # Asynchronous Video Frame Loop
 └── tests/
     └── test_face_detection.py # Automated Test Suite
+
+
+    🛠️ Technology Stack
+Language: Python 3.10+
+
+Computer Vision: OpenCV (opencv-python, opencv-contrib-python), NumPy, Pillow
+
+Backend Framework: Flask
+
+Frontend: HTML5 (Canvas API), CSS3, Vanilla JavaScript (ES6)
+
+Testing: Pytest
+
+🚀 Installation & Setup
+
+Set Up Virtual Environment:
+
+PowerShell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+Install Dependencies:
+
+Bash
+pip install -r requirements.txt
+Run Unit Tests:
+
+Bash
+python -m pytest
+Start Application Server:
+
+Bash
+python app.py
+Open http://127.0.0.1:5000 in Google Chrome or Microsoft Edge and enable camera permissions for live real-time detection.
+
+🔒 Responsible AI & Privacy Statement
+All facial image processing and feature storage occurs exclusively on the local machine.
+
+No personal biometric data or face images are uploaded to third-party cloud services or public repositories.
+
+👤 Author
+Name: Rahul
+
+Internship: CodSoft AI Internship (Task 5)
